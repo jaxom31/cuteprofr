@@ -1576,11 +1576,11 @@ namespace CutebotPro {
     //% block="Faire un carré par %turn de %distance en prenant comme unité: distanceUnits"
     export function faireUnCarre(turn: CutebotProTurn, distance: number, distanceUnits: CutebotProDistanceUnits ): void {
         distanceRunning(CutebotProOrientation.Advance,number,distanceUnits) ;
-		trolleySteering(turn, angle: CutebotProAngle.Angle90) ;
+		trolleySteering(turn,  CutebotProAngle.Angle90) ;
 		distanceRunning(CutebotProOrientation.Advance,number,distanceUnits) ;
-		trolleySteering(turn, angle: CutebotProAngle.Angle90) ;
+		trolleySteering(turn, CutebotProAngle.Angle90) ;
 		distanceRunning(CutebotProOrientation.Advance,number,distanceUnits) ;
-		trolleySteering(turn, angle: CutebotProAngle.Angle90) ;
+		trolleySteering(turn, CutebotProAngle.Angle90) ;
 		distanceRunning(CutebotProOrientation.Advance,number,distanceUnits) ;		
 		
     }	
