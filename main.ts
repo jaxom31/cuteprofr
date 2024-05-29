@@ -115,7 +115,7 @@ enum CutebotProOrientation {
 enum CutebotProSpeedUnits {
     //%block="cm/s"
     Cms = 0,
-    //%block="inch/s"
+    //%block="pouces/s"
     Ins = 1
 }
 
@@ -211,7 +211,7 @@ enum ServoType {
 enum SonarUnit {
     //% block="cm"
     Centimeters,
-    //% block="inches"
+    //% block="pouces"
     Inches
 }
 
