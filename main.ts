@@ -15,35 +15,35 @@ enum CutebotProPIN {
 
 
 enum CutebotProWheel {
-    //%block="left wheel"
+    //%block="roue gauche"
     LeftWheel = 1,
-    //%block="right wheel"
+    //%block="roue droite"
     RightWheel = 2,
-    //%block="all wheel"
+    //%block="Toutes les roues"
     AllWheel = 3
 }
 
 
 enum CutebotProMotors {
-    //% block="left wheel"
+    //% block="roue gauche"
     M1 = 1,
-    //% block="right wheel"
+    //% block="roue droite"
     M2 = 2,
-    //% block="all wheel"
+    //% block="toutes les roues"
     ALL = 3
 }
 
 enum CutebotProMotors1 {
-    //% block="left wheel"
+    //% block="roue gauche"
     M1 = 1,
-    //% block="right wheel"
+    //% block="roue droite"
     M2 = 2,
 }
 
 enum CutebotProDir {
-    //% block="rotate forward"
+    //% block="vers l'avant"
     CW = 1,
-    //% block="backward"
+    //% block="vers l'arrière"
     CCW = 2
 }
 
@@ -59,11 +59,11 @@ enum CutebotProServoIndex {
 }
 
 enum CutebotProRGBLight {
-    //%block="left RGB"
+    //%block="RGB gauche"
     RGBL = 2,
-    //%block="right RGB"
+    //%block="RGB droit"
     RGBR = 1,
-    //%block="all RGB lights"
+    //%block="Toutes les lumières RGB"
     RGBA = 3
 }
 
@@ -1432,7 +1432,7 @@ namespace CutebotPro {
      * get IR value
      */
     //% group="Infrared sensor"
-    //% block="IR button %CutbotProIRButtons is pressed"
+    //% block="Le bouton Infrarouge %CutbotProIRButtons est enfoncé"
     //% weight=150
     export function irButton(Button: CutbotProIRButtons): boolean {
         return (IR_Val & 0x00ff) == Button
@@ -1523,7 +1523,7 @@ namespace CutebotPro {
      */
     //% group="Expansion port"
     //% weight=130
-    //% block="stop motor"
+    //% block="Arrêt moteur"
     export function extendMotorStop(): void {
         let buf = pins.createBuffer(7)
         buf[0] = 0x99;
@@ -1541,7 +1541,7 @@ namespace CutebotPro {
     */
     //% group="Others"
     //% weight=1
-    //% block="version number"
+    //% block="Numéro de version"
     export function readVersions(): string {
         let cutebotProVersionsInteger: number = 0;
         let cutebotProVersionsDecimal: number = 0;
@@ -1571,4 +1571,17 @@ namespace CutebotPro {
         else
             return ("V" + convertToText(cutebotProVersionsInteger) + "." + convertToText(0) + "." + convertToText(cutebotProVersionsDecimal % 10))
     }
+    //% group="Expansion port"
+    //% weight=130
+    //% block="Faire un carré par %turn de %distance en prenant comme unité: distanceUnits"
+    export function faireUnCarre(turn: CutebotProTurn, distance: number, distanceUnits: CutebotProDistanceUnits ): void {
+        distanceRunning(CutebotProOrientation.Advance,number,distanceUnits) ;
+		trolleySteering(turn, angle: CutebotProAngle.Angle90) ;
+		distanceRunning(CutebotProOrientation.Advance,number,distanceUnits) ;
+		trolleySteering(turn, angle: CutebotProAngle.Angle90) ;
+		distanceRunning(CutebotProOrientation.Advance,number,distanceUnits) ;
+		trolleySteering(turn, angle: CutebotProAngle.Angle90) ;
+		distanceRunning(CutebotProOrientation.Advance,number,distanceUnits) ;		
+		
+    }	
 }
