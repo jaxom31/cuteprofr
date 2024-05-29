@@ -25,7 +25,7 @@
   "Patrol.R1|block": "R1",
   "Patrol.R2|block": "R2",
   "Patrol.R3|block": "R3",
-  "RGBLight.RGBA|block": "Touts",
+  "RGBLight.RGBA|block": "Tous",
   "RGBLight.RGBL|block": "RGB_L",
   "RGBLight.RGBR|block": "RGB_R",
   "Servos.S1|block": "S1",

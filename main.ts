@@ -93,7 +93,7 @@ enum CutebotProPID {
 enum CutebotProDistanceUnits {
     //%block="cm"
     Cm = 0,
-    //%block="inch"
+    //%block="pouces"
     Ft = 1,
 }
 
