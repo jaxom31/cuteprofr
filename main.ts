@@ -1573,7 +1573,7 @@ namespace CutebotPro {
     }
     //% group="Expansion port"
     //% weight=130
-    //% block="Faire un carré par %turn de %distance en prenant comme unité: distanceUnits"
+    //% block="Faire un carré par %turn de %distance en prenant comme unité: %distanceUnits"
     export function faireUnCarre(turn: CutebotProTurn, distance: number, distanceUnits: CutebotProDistanceUnits ): void {
         distanceRunning(CutebotProOrientation.Advance,number,distanceUnits) ;
 		trolleySteering(turn,  CutebotProAngle.Angle90) ;
